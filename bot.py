@@ -14,7 +14,7 @@ serverApi = os.getenv('SERVER_API')
 token = os.getenv('BOT_TOKEN')
 
 def checkStatus(json = False):
-    apiResponse = requests.get(f'{serverApi}')
+    apiResponse = requests.get(serverApi)
     apiResponseJson = apiResponse.json()
     print(apiResponseJson)
     if json == False:
